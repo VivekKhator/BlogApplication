@@ -1,0 +1,5 @@
+package com.spring.blogapp.exceptions;
+
+public class GlobalExceptionHandler {
+
+}

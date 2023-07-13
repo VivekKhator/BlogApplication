@@ -1,0 +1,6 @@
+package com.spring.blogapp.exceptions;
+
+public class MethodArgumentNotValidException extends RuntimeException{
+	
+	
+}

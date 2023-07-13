@@ -1,0 +1,14 @@
+package com.spring.blogapp.services;
+
+import java.util.List;
+
+import com.spring.blogapp.payloads.CategoryDto;
+
+public interface CategoryService {
+	
+	public List<CategoryDto> getAllCategories();
+	public CategoryDto getCategory(Integer categoryId);
+	public CategoryDto createCategory(CategoryDto categoryDto);
+	public CategoryDto updateCategory(CategoryDto categoryDto, Integer categoryId);
+	public void deleteCategory(Integer categoryId);
+}

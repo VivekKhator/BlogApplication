@@ -1,0 +1,59 @@
+package com.spring.blogapp.services.impl;
+
+import java.util.List;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.spring.blogapp.payloads.CategoryDto;
+import com.spring.blogapp.repositories.CategoryRepository;
+import com.spring.blogapp.services.CategoryService;
+
+public class CategoryServiecImpl implements CategoryService{
+
+	@Autowired
+	private CategoryRepository cateRepo;
+	
+	@Autowired
+	private ModelMapper modelMapper;
+	
+	@Override
+	public List<CategoryDto> getAllCategories() {
+		
+		return null;
+	}
+
+	@Override
+	public CategoryDto getCategory(Integer categoryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDto createCategory(CategoryDto categoryDto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CategoryDto updateCategory(CategoryDto categoryDto, Integer categoryId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteCategory(Integer categoryId) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public ModelMapper categoryToDto(ModelMapper modelMapper) {
+		CategoryDto cateDto = modelMapper.map(Category, CategoryDto);
+		return cateDto;
+	}
+	
+	public ModelMapper dtoToCategory(ModelMapper modelMapper) {
+		modelMapper.map(CategoryDto, Category);
+	}
+}
